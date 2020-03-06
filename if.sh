@@ -22,7 +22,7 @@ echo "${GREEN}==============="
 echo "##### IF ######"
 echo "===============${RESTORE}"
 echo "${YELLOW}Usage:${RESTORE}"
-cat <<-EOF
+cat <<EOF
 if [ condition-true ]
 then
   command 1
