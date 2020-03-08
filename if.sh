@@ -31,18 +31,14 @@ then
 fi
 EOF
 echo "${BLUE}Example:${RESTORE}"
-if_function () {
-  cat <<EOF
-  MY_SHELL="bash"
-  if [ "$MY_SHELL" = "bash" ]
-  then
-    echo "You seem to like the bash shell."
-  fi
-EOF
-}
-if_function
+out='MY_SHELL="bash"
+if [ "$MY_SHELL" = "bash" ]
+then
+  echo "You seem to like the bash shell."
+fi'
+echo "${out}"
 echo "${GREEN}TEST:${RESTORE}"
-eval "$(if_function)"
+eval "${out}"
 echo
 
 echo "${GREEN}=================="
@@ -62,19 +58,15 @@ else
 fi
 EOF
 echo "${BLUE}Example:${RESTORE}"
-if_else_function() {
-  cat <<EOF
-  MY_SHELL="zsh"
-  if [ "$MY_SHELL" = "bash" ]; then
-    echo "You seem to like the bash shell."
-  else
-    echo "You don't seem to like the bash shell."
-  fi
-EOF
-}
-if_else_function
+out='MY_SHELL="zsh"
+if [ "$MY_SHELL" = "bash" ]; then
+  echo "You seem to like the bash shell."
+else
+  echo "You do not seem to like the bash shell."
+fi'
+echo "${out}"
 echo "${GREEN}TEST:${RESTORE}"
-eval "$(if_else_function)"
+eval "${out}"
 echo
 
 echo "${GREEN}=================="
@@ -98,21 +90,18 @@ else
   ...
 fi
 EOF
-if_elif_function() {
-  cat <<EOF
-  MY_SHELL="zsh"
-  if [ "$MY_SHELL" = "bash" ]
-  then
-    echo "You seem to like the bash shell."
-  elif [ "$MY_SHELL" = "zsh" ]
-  then
-    echo "You seem to like the zsh shell."
-  else
-    echo "You don't seem to like the bash or zsh shells."
-  fi
-EOF
-}
 echo "${BLUE}Example:${RESTORE}"
-if_elif_function
+out='MY_SHELL="zsh"
+if [ "$MY_SHELL" = "bash" ]
+then
+  echo "You seem to like the bash shell."
+elif [ "$MY_SHELL" = "zsh" ]
+then
+  echo "You seem to like the zsh shell."
+else
+  echo "You do not seem to like the bash or zsh shells."
+fi'
+echo "${out}"
 echo "${GREEN}TEST:${RESTORE}"
-eval "$(if_elif_function)"
+eval "${out}"
+

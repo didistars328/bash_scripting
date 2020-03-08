@@ -41,8 +41,8 @@ echo "${out}"
 echo "${GREEN}TEST:${RESTORE}"
 eval "${out}"
 echo
-echo "${CYAN}PRACTICE 1${RESTORE}"
-echo "${GREEN}Please create 3 different files with different names ${RED}(hit space between): ${YELLOW}"
+echo "${CYAN}PRACTICE${RESTORE}"
+echo "${GREEN}Please create 3 different files with different names ${RED}(hit space between)${RESTORE}: ${YELLOW}"
 read  nam1 nam2 nam3;touch ${nam1}.txt ${nam2}.txt ${nam3}.txt
 echo "${GREEN}Now let's change those names using code below: ${RESTORE}"
 practice='FILES=$(ls *txt)
