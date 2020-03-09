@@ -128,3 +128,4 @@ rm -r e[[:upper:]][[:digit:]].txt'
 echo "${out}"
 echo "${GREEN}TEST:${RESTORE}"
 eval "${out}"
+echo "${GREEN} Reference link:${RESTORE} https://www.grymoire.com/Unix/Sh.html"
