@@ -18,15 +18,13 @@ LPURPLE=$'\033[01;35m'
 LCYAN=$'\033[01;36m'
 WHITE=$'\033[01;37m'
 
-echo "${GREEN}================="
-echo "#### UNTILL #####"
-echo "=================${RESTORE}"
-echo "TThe until loop is used to execute a given"
-echo "set of commands as long as the given condition evaluates to false"
+echo "${GREEN}==============="
+echo "#### SELECT #####"
+echo "===============${RESTORE}"
 echo
 echo "${YELLOW}Usage:${RESTORE}"
 cat <<EOF
-until [CONDITION]
+select ITEM in [LIST]
 do
   command1
   command2
@@ -34,11 +32,13 @@ do
 done
 EOF
 echo "${BLUE}Example:${RESTORE}"
-out='counter=0
-until [ $counter -gt 5 ]
+out='PS3="Enter a number: "
+
+select character in Sheldon Leonard Penny Howard Raj
 do
-  echo Counter: $counter
-  ((counter++))
+    echo "Selected character: $character"
+    echo "Selected number: $REPLY"
+    echo "Use CNTRL+C to exit"
 done'
 echo "${out}"
 echo "${GREEN}TEST:${RESTORE}"

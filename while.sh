@@ -44,7 +44,7 @@ done'
 echo "${out}"
 echo "${GREEN}TEST:${RESTORE}"
 eval "${out}"
-echo "In while loops often using 2 commands:"
+echo "${GREEN}In while loops often using 2 commands:${RESTORE}"
 echo " - break - to stop loop"
 echo " - continue - to continue loop"
 echo "${BLUE}Example:${RESTORE}"
@@ -64,7 +64,7 @@ echo "${out}"
 echo "${GREEN}TEST:${RESTORE}"
 eval "${out}"
 echo
-echo  "Note: To read a file by line while loop it's a good choise."
+echo  "${LRED}Note:${RESTORE}${GREEN} To read a file by line while loop it's a good choise.${RESTORE}"
 echo "${BLUE}Example:${RESTORE}"
 out='file=/etc/passwd
 i=0
