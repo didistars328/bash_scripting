@@ -25,7 +25,7 @@ echo "===========================================${RESTORE}"
 echo
 echo "${YELLOW}Usage:${RESTORE}"
 cat <<EOF
-command 1
+command1
 echo "$?"
 EOF
 echo "${BLUE}Example:${RESTORE}"
@@ -80,7 +80,7 @@ then
   exit 123
 else
   echo "$HOST is reachable."
-  exit 212
+  exit 0
 fi'
 echo "${out}"
 echo "${GREEN}TEST:${RESTORE}"
